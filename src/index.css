@@ -1,0 +1,1241 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #000000;
+  --surface-1: #a3a3a3;
+  --muted-1: #000000;
+  --muted-2: #a3a3a3;
+  --border: #ffffff;
+  --radius: 2%;
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-border-spacing-x: 0;
+  --tw-scale-x: 1;
+  --tw-ring-shadow: 0 0 transparent;
+  --tw-shadow-colored: 0 0 transparent;
+  --tw-border-spacing-y: 0;
+  --tw-scale-y: 1;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-shadow: 0 0 transparent;
+  --tw-translate-y: 0;
+  --tw-translate-x: 0;
+  --tw-ring-offset-width: 0px;
+  --nav-height: 5.5rem;
+  --ctr-p: 2.78vw;
+  --tw-rotate: 0;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ring-offset-color: #fff;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: #ffffff;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, .h1-sub {
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  letter-spacing: normal;
+  line-height: 14.4px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.badge-pill {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 9999px;
+  padding: 4px 20px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.badge-pill:hover {
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 1;
+}
+
+/* Button style 1: background transparent, text #ffffff, radius 0px, padding 0px, font 16px/500 */
+.btn-style-1 {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 0px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-style-1:hover {
+  opacity: 0.7;
+}
+
+/* Button style 2: background transparent, text #000000, radius 0px, padding 0px, font 16px/500 */
+.btn-style-2 {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: none;
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 0px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-style-2:hover {
+  opacity: 0.7;
+}
+
+@keyframes arrow-b7f993da {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-arrow-bounce {
+  animation: arrow-b7f993da 0.7s ease infinite;
+}
+
+/* Infinite marquee for client logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ==========================================================================
+   div.hero.container Component CSS (exact source extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+:where(.hero.sp-e1) {
+  display: grid;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  text-transform: uppercase;
+  padding-right: clamp(20px, 2.78vw, 37.9748px);
+  padding-left: clamp(20px, 2.78vw, 37.9748px);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  min-height: calc(100vh - 6rem);
+  align-content: space-between;
+  row-gap: 32px;
+}
+
+@media (min-width: 1366px) {
+  :where(.hero.sp-e1) {
+    grid-template-columns: 1290.06px;
+    grid-template-rows: 313.031px 181.781px 102.188px;
+    min-height: 597px;
+    row-gap: 0;
+  }
+}
+
+:where(.hero .sp-e2) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 14.4px;
+  text-align: start;
+  text-transform: uppercase;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 825px;
+}
+
+:where(.hero .sp-e3) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(54px, 10vw, 136.6px);
+  font-weight: 500;
+  line-height: clamp(50px, 9vw, 122.94px);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1366px) {
+  :where(.hero .sp-e3) {
+    font-size: 136.6px;
+    line-height: 122.94px;
+  }
+}
+
+:where(.hero .sp-e4) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(163, 163, 163);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e5) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e6) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(54px, 10vw, 136.6px);
+  font-weight: 500;
+  line-height: clamp(50px, 9vw, 122.94px);
+  text-align: start;
+  text-transform: uppercase;
+  margin-left: clamp(20px, 10.5vw, 143.43px);
+}
+
+@media (min-width: 1366px) {
+  :where(.hero .sp-e6) {
+    font-size: 136.6px;
+    line-height: 122.94px;
+    margin-left: 143.43px;
+  }
+}
+
+:where(.hero .sp-e7) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(163, 163, 163);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e8) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  text-align: start;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e9) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 12.8px;
+}
+
+:where(.hero .sp-e10) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e11) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e12) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+:where(.hero .sp-e13) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e14) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:where(.hero .sp-e15) {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  :where(.hero .sp-e15) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0;
+  }
+}
+
+:where(.hero .sp-e16),
+:where(.hero .sp-e21) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+:where(.hero .sp-e16):hover,
+:where(.hero .sp-e21):hover {
+  opacity: 0.75;
+}
+
+:where(.hero .sp-e25) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:where(.hero .sp-e26) {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+:where(.hero .sp-e25):hover :where(.hero .sp-e26) {
+  animation: arrow-b7f993da 0.7s ease infinite;
+}
+
+/* ==========================================================================
+   div.NavContainer.container Component CSS (extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+.NavContainer.container.between.sp-e1,
+:where(.NavContainer.sp-e1) {
+  display: flex !important;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  vertical-align: baseline;
+  padding-right: clamp(16px, 2.78vw, 37.9748px);
+  padding-left: clamp(16px, 2.78vw, 37.9748px);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5.5rem;
+  z-index: 40;
+}
+
+.NavContainer .Left.sp-e2,
+:where(.NavContainer .sp-e2) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  margin: 0;
+  max-width: none;
+}
+
+.NavContainer .Logo.sp-e3,
+:where(.NavContainer .sp-e3) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px !important;
+  font-weight: 500;
+  line-height: 42px !important;
+  text-align: start;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.NavContainer .Logo.sp-e3:hover {
+  opacity: 0.8;
+}
+
+.NavContainer .Right.between.sp-e4,
+:where(.NavContainer .sp-e4) {
+  display: flex;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.NavContainer .navlist.sp-e5,
+:where(.NavContainer .sp-e5) {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.25s ease, max-width 0.35s ease;
+}
+
+@media (max-width: 640px) {
+  .NavContainer .navlist.sp-e5 {
+    position: absolute;
+    top: calc(100% - 10px);
+    right: clamp(16px, 2.78vw, 37.9748px);
+    background-color: rgba(12, 12, 12, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 16px 24px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    z-index: 100;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+  }
+}
+
+.NavContainer .listItem.sp-e6,
+.NavContainer .listItem.sp-e8,
+.NavContainer .listItem.sp-e10,
+:where(.NavContainer .sp-e6),
+:where(.NavContainer .sp-e8),
+:where(.NavContainer .sp-e10) {
+  display: list-item;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  list-style: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.NavContainer .listItem.sp-e8,
+.NavContainer .listItem.sp-e10,
+:where(.NavContainer .sp-e8),
+:where(.NavContainer .sp-e10) {
+  margin-left: clamp(16px, 2.78vw, 37.9748px);
+}
+
+@media (max-width: 640px) {
+  .NavContainer .listItem.sp-e8,
+  .NavContainer .listItem.sp-e10,
+  :where(.NavContainer .sp-e8),
+  :where(.NavContainer .sp-e10) {
+    margin-left: 0;
+  }
+}
+
+
+.NavContainer .sp-e7,
+.NavContainer .sp-e9,
+:where(.NavContainer .sp-e7),
+:where(.NavContainer .sp-e9) {
+  display: inline;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.NavContainer .sp-e7:hover,
+.NavContainer .sp-e9:hover {
+  opacity: 0.7;
+}
+
+.NavContainer .ButtonContainer.sp-e11,
+:where(.NavContainer .sp-e11) {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.NavContainer .Menu.start.sp-e12,
+:where(.NavContainer .sp-e12) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 0;
+  padding: 0;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.NavContainer .Menu.start.sp-e12:hover {
+  opacity: 0.7;
+}
+
+.NavContainer .sp-e13,
+:where(.NavContainer .sp-e13) {
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.NavContainer .sp-e14,
+:where(.NavContainer .sp-e14) {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.25s ease;
+}
+
+.NavContainer .sp-e15,
+:where(.NavContainer .sp-e15) {
+  stroke: rgb(255, 255, 255);
+}
+
+/* ==========================================================================
+   div#works.works Component CSS (exact source extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+:where(.works.sp-e1) {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: clamp(80px, 10vw, 140px);
+  padding-bottom: clamp(80px, 11vw, 160px);
+  width: 100%;
+}
+
+:where(.works .sp-e2) {
+  display: block;
+  box-sizing: border-box;
+  padding-right: clamp(16px, 2.78vw, 37.9748px);
+  padding-left: clamp(16px, 2.78vw, 37.9748px);
+  width: 100%;
+}
+
+:where(.works .sp-e3) {
+  display: block;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+}
+
+:where(.works .sp-e4) {
+  display: block;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  padding-right: clamp(0px, 8vw, 109.28px);
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:where(.works .sp-e5) {
+  display: list-item;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  border-top: 1px solid rgba(163, 163, 163, 0.6);
+  border-bottom: 1px solid rgba(163, 163, 163, 0.6);
+  list-style: none;
+  transition: opacity 0.3s ease;
+}
+
+:where(.works .sp-e12) {
+  display: list-item;
+  position: relative;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  border-bottom: 1px solid rgba(163, 163, 163, 0.6);
+  list-style: none;
+  transition: opacity 0.3s ease;
+}
+
+:where(.works .sp-e6) {
+  display: flex;
+  box-sizing: border-box;
+  color: rgb(163, 163, 163);
+  padding-top: clamp(24px, 3.125vw, 42.6872px);
+  padding-bottom: clamp(24px, 3.125vw, 42.6872px);
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+:where(.works .sp-e7),
+:where(.works .sp-e13),
+:where(.works .sp-e15),
+:where(.works .sp-e18),
+:where(.works .sp-e20) {
+  display: block;
+  color: rgb(163, 163, 163);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(34px, 6.666vw, 91.0661px);
+  font-weight: 500;
+  line-height: clamp(48px, 9.99vw, 136.599px);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+:where(.works .list-item:hover .name) {
+  color: rgb(255, 255, 255);
+  transform: translateX(8px);
+}
+
+:where(.works .sp-e8),
+:where(.works .sp-e16) {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+:where(.works .hover-reveal) {
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
+  border-radius: 2%;
+  overflow: hidden;
+  will-change: transform, opacity;
+  transition: opacity 0.25s ease-out;
+}
+
+:where(.works .hover-reveal__inner) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2%;
+  transition: opacity 0.25s ease-out;
+}
+
+:where(.works .hover-reveal__image) {
+  display: block;
+  object-fit: cover;
+  border-radius: 2%;
+  max-width: 355px;
+  max-height: 355px;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  transition: opacity 0.25s ease-out;
+}
+
+:where(.works .sp-e22) {
+  display: block;
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+}
+
+:where(.works .sp-e23) {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 9999px;
+  padding: 12px 28px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+:where(.works .sp-e23):hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+:where(.works .sp-e24) {
+  font-size: 11px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ==========================================================================
+   div#roller Component CSS (exact source extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+#roller.sp-e1,
+:where(#roller.sp-e1) {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  vertical-align: baseline;
+  width: 100%;
+  white-space: nowrap;
+  user-select: none;
+}
+
+#roller .rolling-content.sp-e2,
+:where(#roller .sp-e2) {
+  display: flex;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: rollMarquee 45s linear infinite;
+}
+
+#roller:hover .rolling-content.sp-e2 {
+  animation-play-state: paused;
+}
+
+@keyframes rollMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+#roller :is(.sp-e3, .sp-e4, .sp-e5, .sp-e6, .sp-e7, .sp-e8, .sp-e9, .sp-e10, .sp-e11),
+:where(#roller :is(.sp-e3, .sp-e4, .sp-e5, .sp-e6, .sp-e7, .sp-e8, .sp-e9, .sp-e10, .sp-e11)) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  padding-right: clamp(60px, 9vw, 148px);
+  height: clamp(34px, 4.2vw, 62px);
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  filter: invert(1);
+  opacity: 0.65;
+  transition: opacity 0.25s ease;
+}
+
+#roller :is(.sp-e3, .sp-e4, .sp-e5, .sp-e6, .sp-e7, .sp-e8, .sp-e9, .sp-e10, .sp-e11):hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   div.about-me.container Component CSS (exact source extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+.about-me.container.sp-e1,
+:where(.about-me.sp-e1) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  vertical-align: baseline;
+  padding-top: clamp(80px, 12vw, 180px);
+  padding-right: clamp(16px, 2.78vw, 37.9748px);
+  padding-bottom: clamp(80px, 11vw, 160px);
+  padding-left: clamp(16px, 2.78vw, 37.9748px);
+  width: 100%;
+}
+
+.about-me .content.sp-e2,
+:where(.about-me .sp-e2) {
+  display: grid;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  margin-left: 0;
+  gap: 40px clamp(24px, 6vw, 86px);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .about-me .content.sp-e2,
+  :where(.about-me .sp-e2) {
+    margin-left: clamp(0px, 5.85vw, 80px);
+    grid-template-columns: minmax(0, 224px) minmax(0, 562.031px);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1366px) {
+  .about-me .content.sp-e2,
+  :where(.about-me .sp-e2) {
+    margin-left: 80px;
+    grid-template-columns: 562.031px 562.031px;
+    grid-template-rows: 334px;
+  }
+}
+
+.about-me .graphic.sp-e3,
+:where(.about-me .sp-e3) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+}
+
+.about-me .graphic img.sp-e4,
+:where(.about-me .sp-e4) {
+  display: block;
+  border-radius: 50% !important;
+  width: clamp(180px, 20vw, 240px);
+  height: clamp(180px, 20vw, 240px);
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.about-me .graphic img.sp-e4:hover {
+  transform: scale(1.04);
+}
+
+.about-me .text.sp-e5,
+:where(.about-me .sp-e5) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  max-width: 464px;
+}
+
+.about-me .LabelWithExplainer.sp-e6,
+:where(.about-me .sp-e6) {
+  display: block;
+  line-height: 26px;
+}
+
+.about-me .Label.sp-e7,
+:where(.about-me .sp-e7) {
+  display: block;
+  color: rgb(163, 163, 163);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.about-me .Explainer.sp-e8,
+:where(.about-me .sp-e8) {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.18px;
+  text-align: start;
+  margin-top: 4px;
+}
+
+.about-me .cta.sp-e9,
+:where(.about-me .sp-e9) {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 24px;
+  padding: 4px 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.about-me .cta.sp-e9:hover,
+:where(.about-me .sp-e9):hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* ==========================================================================
+   footer.text-white Component CSS (exact source extracted from cynthiaugwu.com)
+   ========================================================================== */
+
+footer.text-white.sp-e1,
+:where(footer.text-white.sp-e1) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  vertical-align: baseline;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+footer.text-white .FooterContainer.sp-e2,
+:where(footer.text-white .sp-e2) {
+  display: flex;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-right: clamp(16px, 2.78vw, 37.9748px);
+  padding-left: clamp(16px, 2.78vw, 37.9748px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  footer.text-white .FooterContainer.sp-e2,
+  :where(footer.text-white .sp-e2) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+footer.text-white .Left.sp-e3,
+:where(footer.text-white .sp-e3) {
+  display: flex;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+footer.text-white .copyright.sp-e4,
+:where(footer.text-white .sp-e4) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: capitalize;
+}
+
+footer.text-white .sp-e5,
+:where(footer.text-white .sp-e5) {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: capitalize;
+}
+
+footer.text-white .currentTime.sp-e6,
+:where(footer.text-white .sp-e6) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: capitalize;
+  margin-left: clamp(16px, 2.5vw, 32px);
+}
+
+footer.text-white .sp-e7,
+:where(footer.text-white .sp-e7) {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+footer.text-white .Right.sp-e8,
+:where(footer.text-white .sp-e8) {
+  display: block;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+}
+
+footer.text-white .start.flex-wrap.sp-e9,
+:where(footer.text-white .sp-e9) {
+  display: flex;
+  position: static;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px clamp(16px, 3.8vw, 52px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer.text-white :is(.sp-e10, .sp-e12, .sp-e14, .sp-e16),
+:where(footer.text-white :is(.sp-e10, .sp-e12, .sp-e14, .sp-e16)) {
+  display: list-item;
+  list-style: none;
+  overflow: hidden;
+}
+
+footer.text-white :is(.sp-e11, .sp-e13, .sp-e15, .sp-e17),
+:where(footer.text-white :is(.sp-e11, .sp-e13, .sp-e15, .sp-e17)) {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+footer.text-white :is(.sp-e11, .sp-e13, .sp-e15, .sp-e17):hover {
+  opacity: 0.7;
+}
+
+
+
+
